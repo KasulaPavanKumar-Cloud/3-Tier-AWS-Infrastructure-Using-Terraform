@@ -1,8 +1,19 @@
-.terraform/
+# Terraform state files
 *.tfstate
-*.tfstate*
+*.tfstate.*
+
+# Backup files
 *.tfstate.backup
+
+# Variable files
 *.tfvars
 *.var.db_password
-.terraform.lock.hcl
+
+# Terraform local cache
+.terraform/
+
+# Editor-specific settings
+.vscode/
+# Local .terraform directories
+.terraform/
 .vscode/
