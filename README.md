@@ -109,7 +109,7 @@ The infrastructure is divided into **three tiers**:
 
 ### Clone Repository
 ```bash
-git clone <your-repo-url>
+git clone <these-repo-url>
 cd 3Tier/envs/dev
 
 ```
@@ -126,25 +126,7 @@ terraform plan
 terraform apply -auto-approve
 
 ### 📂 Project Structure
-3Tier/
-├── envs/dev/               # Environment-specific configs
-│   ├── main.tf             # Calls modules for dev env
-│   ├── variables.tf        # Variables for dev
-│   ├── terraform.tfvars    # Values for variables
-│   ├── backend.tf          # Remote backend config
-│   ├── output.tf           # Terraform outputs
-│
-├── modules/                # Reusable modules
-│   ├── vpc/                # Networking (VPC, subnets, routes)
-│   ├── security_groups/    # Firewall rules
-│   ├── alb/                # Application Load Balancer
-│   ├── asg/                # Auto Scaling Group (EC2 + User Data)
-│   │   ├── user_data/
-│   │   │   ├── web.sh.tpl  # Nginx "About Me" page setup
-│   │   │   └── app.sh.tpl  # App tier bootstrap
-│   ├── rds/                # Database (RDS)
-│   └── iam/                # IAM roles/policies
-
+![alt text](image.png)
 
 ### Accessing the Application
 After successful deployment, Terraform outputs the ALB DNS name
