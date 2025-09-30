@@ -3,6 +3,6 @@
 *.tfstate*
 *.tfstate.backup
 *.tfvars
-
+*.var.db_password
 .terraform.lock.hcl
 .vscode/
