@@ -11,7 +11,9 @@ resource "aws_db_subnet_group" "this" {
 }
 
 # here we Create the RDS instance
-# We use the project and owner variables to create a unique identifier for the instance
+# Here we use the replace function to ensure that the identifier only contains valid characters
+# We also use trimspace to remove any leading or trailing spaces from the project and owner variables
+# and lower to convert them to lowercase
 resource "aws_db_instance" "this" {
   identifier = "r-${replace(lower(trimspace(var.project)), "/[^a-z0-9-]/", "-")}-rds-${replace(lower(trimspace(var.owner)), "/[^a-z0-9-]/", "-")}"
   engine                 = var.engine
