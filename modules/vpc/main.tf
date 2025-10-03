@@ -104,3 +104,5 @@ resource "aws_route_table_association" "db_assoc" {
   subnet_id      = aws_subnet.private_db[count.index].id
   route_table_id = aws_route_table.private.id
 }
+
+#just for testing purpose
